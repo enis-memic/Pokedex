@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(253, 66, 66);
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#poke-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: white;
+}
+
+.card h3 {
+  font-size: 30px;
+}
+.card img {
+  width: 100px;
+}
+.card .type {
+  font-size: 20px;
+}
