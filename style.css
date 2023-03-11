@@ -1,18 +1,33 @@
+html,
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
   box-sizing: border-box;
   background-color: rgb(253, 66, 66);
 }
-h1 {
-  font-size: 40px;
-  text-align: center;
+
+main {
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  background: url(Images/pokedex1.jpg) no-repeat center;
+  background-size: contain;
 }
 
 #poke-cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-left: 60px;
+  overflow: auto;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -20,13 +35,26 @@ h1 {
   align-items: center;
   width: 300px;
   background-color: white;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  position: relative;
+  top: 0;
+  left: 90%;
 }
 
 .card h3 {
   font-size: 30px;
 }
 .card img {
-  width: 100px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 .card .type {
   font-size: 20px;
