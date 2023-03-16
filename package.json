@@ -1,0 +1,19 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/enis-memic/Pokedex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enis-memic/Pokedex/issues"
+  },
+  "homepage": "https://github.com/enis-memic/Pokedex#readme"
+}

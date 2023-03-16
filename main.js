@@ -40,11 +40,9 @@ const CreatePokemonCard = (pokemon) => {
   pokemonInnerhtml = `
   <h3>${pokemonName}</h3>
   <img src="${pokemon.sprites.front_default}" alt="Pokemon image" />
-  <h4 class="type">Type: ${type}</h4>
-  <button>More about</button>
-  
+  <h4 class="type-header">${type}</h4>
+  <button class="card-btn">More about</button>
   `;
-
   pokemonEl.innerHTML = pokemonInnerhtml;
   pokeCards.appendChild(pokemonEl);
 
@@ -55,21 +53,27 @@ const CreatePokemonCard = (pokemon) => {
     popup.style.backgroundColor = color;
     popup.innerHTML = `
       <p class="close">X</p>
-      <h3>More information about ${pokemonName}</h3>
-      <img class="popup-img" src="${pokemon.sprites.back_shiny}" alt="Pokemon image" />
-      <h4>Type: ${pokemon.types[0].type.name}</h4>
+      <h3>${pokemonName}</h3>
+      <div class="popup-first">
+      <div>
+      <img class="popup-img" src="${pokemon.sprites.front_shiny}" alt="Pokemon image" />
+      <h4 class="popup-types-header">Type: ${pokemon.types[0].type.name}</h4>
+      </div>
       <div class="popup-stats">
-      <h3>Abilities</h3>
+      <h4>Abilities</h4>
       <p>ATTACK: ${pokemon.stats[1].base_stat} </p>
       <p>DEFENSE: ${pokemon.stats[2].base_stat} </p>
       <p>SPEED: ${pokemon.stats[5].base_stat}</p>
       </div>
+      </div>
       <div class="popup-moves">
-      <h3>Moves</h3>
-      <p>Move 1: ${pokemon.moves[0].move.name}</p>
-      <p>Move 2: ${pokemon.moves[1].move.name}</p>
-      <p>Move 3: ${pokemon.moves[2].move.name}</p>
-      <p>Move 4: ${pokemon.moves[3].move.name}</p>
+      <h4 class="move-title">Moves</h4>
+      <div class="move-grid">
+      <p>${pokemon.moves[0].move.name}</p>
+      <p>${pokemon.moves[1].move.name}</p>
+      <p>${pokemon.moves[2].move.name}</p>
+      <p>${pokemon.moves[3].move.name}</p>
+      </div>
       </div>
     `;
     const modal = document.createElement('div');
