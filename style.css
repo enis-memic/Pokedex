@@ -10,21 +10,20 @@ body {
   box-sizing: border-box;
   background-color: rgb(253, 66, 66);
 }
+header {
+  padding: 5rem;
+}
 
 main {
   width: 1000px;
   height: 100%;
   margin: auto;
-  background: url(Images/pokedex1.jpg) no-repeat center;
-  background-size: contain;
 }
 
 #poke-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-left: 60px;
   overflow: auto;
 }
 
@@ -45,7 +44,7 @@ h1 {
 h2 {
   position: relative;
   top: 0;
-  left: 90%;
+  left: 80%;
 }
 
 .card h3 {
@@ -58,4 +57,75 @@ h2 {
 }
 .card .type {
   font-size: 20px;
+}
+.modal {
+  position: fixed;
+  background: #c1c7d090;
+  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+}
+.popup {
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  transform: translate(-50%, 0);
+  width: 40%;
+  height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.popup h3 {
+  text-align: center;
+}
+
+.popup form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.popup form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.popup form button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.popup form button:hover {
+  background-color: #c62828;
+}
+
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
